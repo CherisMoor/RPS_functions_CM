@@ -1,24 +1,27 @@
 
-//var userChoice = prompt("Do you choose rock, paper or scissors?");
+// var userChoice = prompt("Do you choose rock, paper or scissors?");
 
-var hands = ['rock', 'paper', 'scissors'];
+const hands = ['rock', 'paper', 'scissors'];
 
-function getHand(p1,p2)
+function getHand()
 {
     return hands[parseInt(Math.random()*10%3)];
 }
 
-var player1 = [
-    name= "Cherish",
-    function getHand(p1)
-],
+var player1 = {
+    name: "Cherish",
+    hand: '',
+    wins: 0,
+}
+var player2 = {
+    name: "Zombie",
+    handRolled: '',
+    wins: 0,
+}
 
-var player2 = [
-    name= "Zombie",
-    function getHand(p2)
-],
 
-function playRound(){
+function playRound(player1, player2)
+{
     if(player1Hand==player2Hand)
     {
         return "Cherish: " + player1Hand + "\nZombie: " + player2Hand + "\nThe result is a tie!";
@@ -67,9 +70,9 @@ function playGame(player1, player2, playUntil) {
     for (var i=0; i < playUntil; i++) {
 
         console.log('Round ', i+1)
-        let winner = round();
+        let winner = 'Round';
 
-        if (winner == player1)  {
+        if (winner == player1> player2)  {
             player1Score++;
             console.log(player1, " wins the round!")
         } else if (winner == player2) {
@@ -82,7 +85,6 @@ function playGame(player1, player2, playUntil) {
         if (player1Score || player2Score > Math.round(playUntil/2)) {
             break;
         }
-
     }
 
 
